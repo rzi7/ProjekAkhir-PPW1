@@ -3,6 +3,12 @@
 
 
 
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 .Btn {
     display: flex;
@@ -234,7 +240,7 @@ font style end
 */
 
 .navbar {
-    position: fixed;
+    position: absolute;
     z-index: +3;
     top: 0;
     left: 0;
@@ -285,6 +291,7 @@ font style end
 
 section {
     margin-top: -100px;
+    z-index: +2;
 }
 
 .container {
@@ -342,4 +349,80 @@ section {
 
 .main-info p {
     font-size: 20px;
+}
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 
+content 
+*/
+
+.content {
+    display: flex;
+    gap: 250px;
+    width: 100%;
+}
+
+.content .information {
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+}
+
+.content .information .world {
+    margin-left: 40px;
+    width: 80%;
+}
+
+.content .information h1 {
+    margin-bottom: 25px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.content .information p {
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.gmbr {
+    display: flex;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.people img {
+    position: absolute;
+    bottom: 143px;
+    z-index: +1;
+    left: -120px;
+    width: 30%;
+    object-fit: cover;
+    outline: #ffff solid 10px;
+}
+
+.air-plane img {
+    position: relative;
+    width: 60%;
+    top: -700px;
+    outline: #ffff solid 10px;
+    object-fit: cover;
+}
+
+.rekomen {
+    margin-top: 280px;
+    width: 100%;
+    height: 50vh;
+    /* background-color: #ffff; */
+    background-color: #F7F7F7;
 }
