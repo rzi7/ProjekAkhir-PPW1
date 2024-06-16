@@ -620,6 +620,41 @@ footer end
 */
 
 @media screen and (max-width: 1170px) {
+    /* 
+    button login
+    */
+    .Btn {
+        width: 33px;
+        height: 32px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    /* 
+    button login end
+    */
+
+
+    /* 
+    button sign in start
+    */
+
+    .signupBtn {
+        width: 130px;
+        height: 30px;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    /* 
+    button sign in end
+    */
+    
+    .nav-link {
+        font-size: 16px;
+    }
+
     .brand {
         font-size: 25px;
     }
@@ -632,7 +667,14 @@ footer end
         height: 72vh;
         width: 100%;
         object-fit: cover;
+    }
 
+    .design {
+        height: 49vh;
+    }
+
+    .main-info {
+        height: 60vh;
     }
     
     .main-info .teks {
