@@ -339,7 +339,6 @@ section {
 
 .main-info .row {
     display: flex;
-    background-color: blue;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -611,7 +610,7 @@ footer span {
 footer end
 */
 
-@media screen and (max-width: 932px) {
+@media screen and (max-width: 1170px) {
     .brand {
         font-size: 25px;
     }
@@ -628,7 +627,6 @@ footer end
     }
     
     .main-info .teks {
-        background-color: red;
         width: 90%;
     }
 
