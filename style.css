@@ -339,6 +339,7 @@ section {
 
 .main-info .row {
     display: flex;
+    background-color: blue;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -469,6 +470,25 @@ content
     margin-top: 10px;
 }
 
+.popular {
+    color: #D9D9D9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 4px;
+    background-color: #D9D9D9;
+}
+
 /* 
 content end
 */
@@ -590,3 +610,33 @@ footer span {
 /* 
 footer end
 */
+
+@media screen and (max-width: 932px) {
+    .brand {
+        font-size: 25px;
+    }
+
+    .gambar {
+        width: 100%;
+    }
+
+    .mountain {
+        height: 72vh;
+        width: 100%;
+        object-fit: cover;
+
+    }
+    
+    .main-info .teks {
+        background-color: red;
+        width: 90%;
+    }
+
+    .teks h1 {
+        font-size: 27px;
+    }
+
+    .teks p {
+        font-size: 15px;
+    }
+}
