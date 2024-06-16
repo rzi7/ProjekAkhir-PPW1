@@ -11,6 +11,12 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
 
 .Btn {
     display: flex;
@@ -109,7 +115,7 @@
     left: 0;
     display: block;
     border-radius: 50px;
-    background: #dfceff;
+    background: #304E71;
     width: 45px;
     height: 45px;
     transition: all 0.3s ease;
@@ -139,7 +145,7 @@
 
 .cta:hover:before {
     width: 100%;
-    background: #ff0000;
+    background: #ff8000;
 }
 
 .cta:hover svg {
@@ -464,6 +470,20 @@ content
 }
 
 /* 
+content end
+*/
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 70vh;
+}
+
+
+/* 
 footer start
 */
 
@@ -473,6 +493,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    /* margin-top: 25rem; */
 }
 
 footer span {
@@ -484,13 +505,10 @@ footer span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 65px;
     width: 100%;
 }
 
-.footer-title {
-
-}
 
 .footer-isi {
     display: flex;
@@ -509,3 +527,66 @@ footer span {
     text-align: center;
     height: 170px;
 }
+
+.footer-info {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+}
+
+.footer-about {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-aboutt {
+    width: 50%;
+}
+
+.footer-about p {
+    font-size: 13px;
+}
+
+.footer-about .logo-social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.pages a:hover {
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+
+.link {
+    display: flex;
+    width: 60%;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link .pages {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.email, .telp, .alamat {
+    display: flex;
+    gap: 20px;
+}
+
+.copyright {
+    margin-bottom: 0;
+    margin-top: 60px;
+    top: auto;
+    bottom: 0;
+}
+
+/* 
+footer end
+*/
