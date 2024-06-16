@@ -518,9 +518,6 @@ footer span {
     color : #4200FF;
 }
 
-.footer-container {
-}
-
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -619,7 +616,7 @@ footer span {
 footer end
 */
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 896px) {
     /* 
     button login
     */
@@ -670,7 +667,7 @@ footer end
     }
 
     .design {
-        height: 49vh;
+        height: 48.3vh;
     }
 
     .main-info {
@@ -687,5 +684,28 @@ footer end
 
     .teks p {
         font-size: 15px;
+    }
+
+    .information .world {
+        margin-top: -100px;
+    }
+    
+    .information .world h1{
+        font-size: 20px;
+    }
+
+    .information .world p {
+        font-size: 10px;
+    }
+
+    .people img {
+        left: 0;
+        top: 35px;
+        outline: #ffff solid 3px;
+    }
+
+    .air-plane img {
+        top: -600px;
+        left: 30px;
     }
 }
