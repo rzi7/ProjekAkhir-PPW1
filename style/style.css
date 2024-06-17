@@ -974,12 +974,11 @@ footer end
     popular destination beressss walaupun bug dikit di posisi bodo amat
     */
 
-    .cta-container {
-        margin-left: 20px;
-    }
 
-
+    
+    
     .cta-container h1 {
+        margin-left: 25px;
         font-size: 20px;
     }
 
