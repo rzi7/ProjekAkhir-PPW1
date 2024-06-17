@@ -667,6 +667,7 @@ footer end
     }
 
     .design {
+        display: none;
         height: 48.3vh;
     }
 
@@ -705,7 +706,86 @@ footer end
     }
 
     .air-plane img {
-        top: -600px;
+        top: -412px;
         left: 30px;
     }
+
+    /* 
+    rekomen dimulai
+    */
+
+    .rekomen {
+        height: 70vh;
+    }
+    
+    .popular {
+        margin-top: 30px;
+    }
+
+    .rekomen .rekomen-foto{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 300px;
+    }
+
+    .container-rekomen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .rekomen .rekomen-foto .teks-rekomen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .rekomen .rekomen-foto img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+    
+    .london {
+        z-index: 1;
+        display: none;
+    }
+    
+    .bali {
+        display: none;
+        z-index: 2;
+    }
+
+    .paris {
+        display: none;
+        z-index: 3;
+    }
+    
+    .raja-ampat {
+        z-index: 4;
+    }
+
+    .teks-rekomen h3 {
+        left: 0px;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    .teks-rekomen p {
+        margin-top: 30px;
+        margin-left: 15px;
+        font-size: 10px;
+    }
+
+    /* 
+    popular destination beressss walaupun bug dikit di posisi bodo amat
+    */
+
+    .cta-container h1 {
+        font-size: 20px;
+    }
+
 }
