@@ -1,0 +1,151 @@
+/* 
+template start
+*/
+
+.submitBtn {
+    margin-top: 20px;
+    width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to left, rgb(0, 149, 255), rgb(10, 42, 158));
+    letter-spacing: 0.7px;
+}
+
+.submitBtn:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+.input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+}
+
+.input-name {
+    width: 450px;
+}
+
+.input-container input[type="text"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-container label {
+    margin-left: 10px;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
+
+/* 
+template end
+*/
+
+
+nav {
+    height: 10vh;
+}
+
+.navbar {
+    background-color: rgba(48, 78, 113, 1);
+    position: static;
+}
+
+.conten {
+    /* background-color: red; */
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+
+
+.create-plan {
+}
+
+.itinerary-name {
+}
+
+.date {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -30px;
+    
+}
+
+.footer-title h1 {
+    font-size: 30px;
+}
+
+.footer-isi h3{
+    font-size: 20px;
+}
+
+.footer-isi p {
+    font-size: 13px;
+}
+
+.link, .copyright {
+    font-size: 13px;
+}
+

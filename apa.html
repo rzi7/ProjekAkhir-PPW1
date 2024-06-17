@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Input with Calendar</title>
+    <style>
+        input[type="date"] {
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .calendar {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .calendar .header {
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .calendar .days {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .calendar .day {
+            width: 14.2857%;
+            /* 100% / 7 */
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="tanggalLahir">Tanggal Lahir:</label>
+    <input type="date" id="tanggalLahir" name="tanggalLahir" onclick="showCalendar(this)">
+    <div id="calendar" class="calendar"></div>
+
+    <script>
+        function showCalendar(input) {
+            const calendar = document.getElementById('calendar');
+            const date = new Date(input.value);
+            const year = date.getFullYear();
+            const month = date.getMonth();
+
+            calendar.innerHTML = '';
+
+            const header = document.createElement('div');
+            header.classList.add('header');
+
+            const prevButton = document.createElement('button');
+            prevButton.textContent = '<';
+            prevButton.onclick = () => showCalendar(input, year, month - 1);
+            header.appendChild(prevButton);
+
+            const monthName = document.createElement('span');
+            monthName.textContent = `${['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'][month]} ${year}`;
+            header.appendChild(monthName);
+
+            const nextButton = document.createElement('button');
+            nextButton.textContent = '>';
+            nextButton.onclick = () => showCalendar(input, year, month + 1);
+            header.appendChild(nextButton);
+
+            calendar.appendChild(header);
+
+            const days = document.createElement('div');
+            days.classList.add('days');
+
+            const firstDay = new Date(year, month, 1);
+            const firstDayIndex = firstDay.getDay();
+
+            for (let i = 0 - firstDayIndex; i < 31; i++) {
+                const day = document.createElement('div');
+                day.classList.add('day');
+
+                const date = new Date(year, month, i + 1);
+                day.textContent = date.getDate();
+
+                if (date.getMonth() !== month) {
+                    day.classList.add('other-month');
+                }
+
+                day.onclick = () => {
+                    input.value = date.toISOString().slice(0, 10);
+                    calendar.style.display = 'none';
+                };
+
+                days.appendChild(day);
+            }
+
+            calendar.appendChild(days);
+            calendar.style.display = 'block';
+            calendar.style.left = input.offsetLeft + 'px';
+            calendar.style.top = input.offsetTop + input.offsetHeight + 'px';
+        }
+    </script>
+</body>
+
+</html>

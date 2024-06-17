@@ -1,0 +1,25 @@
+nav {
+    height: 10vh;
+}
+
+.navbar {
+    background-color: rgba(48, 78, 113, 1);
+    position: static;
+}
+
+.footer-title h1 {
+    font-size: 30px;
+}
+
+.footer-isi h3 {
+    font-size: 20px;
+}
+
+.footer-isi p {
+    font-size: 13px;
+}
+
+.link,
+.copyright {
+    font-size: 13px;
+}
