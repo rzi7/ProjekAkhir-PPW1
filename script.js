@@ -1,3 +1,21 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".scroll-link");
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default anchor click behavior
+
+      const targetId = this.getAttribute("href").substring(1); // Get the target ID
+      const targetElement = document.getElementById(targetId);
+
+      // Scroll to the target element
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    });
+  });
+});
+
 // Custom JavaScript for Parallax Effect
 document.addEventListener("DOMContentLoaded", function () {
   const rellaxElements = document.querySelectorAll("[data-rellax-percentage]");
@@ -13,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Calculate the offset based on scroll position
       const offset =
-        ((scrollPosition - elementPosition + windowHeight) * percentage);
+        (scrollPosition - elementPosition + windowHeight) * percentage;
 
       // Apply the parallax effect
       element.style.transform = `translateY(${offset}px)`;
