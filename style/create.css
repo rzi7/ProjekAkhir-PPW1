@@ -100,10 +100,10 @@ template end
 
 nav {
     height: 10vh;
+    background-color: rgba(48, 78, 113, 1);
 }
 
 .navbar {
-    background-color: rgba(48, 78, 113, 1);
     position: static;
 }
 
