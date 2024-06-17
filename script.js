@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const rekomenFoto = document.querySelectorAll(".teks-rekomen");
+  let animationInterval;
 
   function showElementsSequentially(elements, interval) {
     let index = 0;
@@ -60,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index < elements.length) {
         elements[index].style.opacity = "1"; // Show the element
         index++;
-        setTimeout(showNextElement, interval); // Call the function again after the interval
+        animationInterval = setTimeout(showNextElement, interval); // Call the function again after the interval
       } else {
         index = 0;
-        setTimeout(hideElementsSequentially, interval); // Reset and hide elements after a full cycle
+        animationInterval = setTimeout(hideElementsSequentially, interval); // Reset and hide elements after a full cycle
       }
     }
 
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.forEach((element) => {
         element.style.opacity = "0"; // Hide all elements
       });
-      setTimeout(showNextElement, interval); // Start showing elements again
+      animationInterval = setTimeout(showNextElement, interval); // Start showing elements again
     }
 
     showNextElement();
@@ -81,7 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function initializeStaggeredAnimation() {
     const mediaQuery = window.matchMedia("(max-width: 896px)"); // Change this as needed
     if (mediaQuery.matches) {
-      showElementsSequentially(rekomenFoto, 2000); // 2000 ms interval for each element
+      if (!animationInterval) {
+        showElementsSequentially(rekomenFoto, 2000); // 2000 ms interval for each element
+      }
+    } else {
+      clearTimeout(animationInterval); // Clear any running animations
+      animationInterval = null; // Reset the interval variable
+      rekomenFoto.forEach((element) => {
+        element.style.opacity = "1"; // Ensure all elements are shown
+      });
     }
   }
 
@@ -109,4 +118,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
