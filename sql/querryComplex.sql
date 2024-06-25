@@ -1,0 +1,51 @@
+-- Active: 1718620152358@@127.0.0.1@3306@itineraryplanner
+
+
+-- join query
+SELECT
+    U.USERNAME       AS NAMA_PENGGUNA,
+    I.ITINERARY_NAME AS NAMA_PERJALANAN,
+    A.ACTIVITY_NAME  AS NAMA_AKTIVITAS,
+    L.LOCATION_NAME  AS NAMA_LOKASI
+FROM
+    USER             U
+    JOIN ITINERARYPLANNER I
+    ON U.USER_ID = I.USER_ID
+    JOIN ACTIVITY A
+    ON I.ITINERARY_ID = A.ITINERARY_ID
+    JOIN LOCATION L
+    ON A.LOCATION_ID = L.LOCATION_ID;
+
+-- subquery
+SELECT
+    I.ITINERARY_ID,
+    I.ITINERARY_NAME
+FROM
+    ITINERARYPLANNER I
+WHERE
+    I.USER_ID = (
+        SELECT
+            U.USER_ID
+        FROM
+            USER U
+        WHERE
+            U.EMAIL = "email@example.com"
+    );
+
+-- join with subquery
+SELECT
+    A.ACTIVITY_NAME AS NAMA_AKTIFITAS,
+    L.LOCATION_NAME AS NAMA_LOKASI
+FROM
+    ACTIVITY         A
+    JOIN LOCATION L
+    ON A.LOCATION_ID = L.LOCATION_ID
+WHERE
+    A.ITINERARY_ID IN (
+        SELECT
+            I.ITINERARY_ID
+        FROM
+            ITINERARYPLANNER I
+        WHERE
+            I.END_DATE < '2024-12-31'
+    );

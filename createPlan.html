@@ -72,10 +72,10 @@
     <div class="conten">
         <h1 class="title poppins-medium">Plan a new trip</h1>
         <div class="create-plan">
-            <form action="">
+            <form action="" id="planningForm">
                 <div class="itinerary-name">
                     <div class="input-container input-name">
-                        <input type="text" id="input" type="text" required="" >
+                        <input type="text" id="input" type="text" class="inputDestination" required="" >
                         <label for="input" class="label">Where to?</label>
                         <div class="underline"></div>
                     </div>
@@ -83,21 +83,21 @@
                 <div class="date">
                     <div class="date-start">
                         <div class="input-container">
-                            <input type="text" id="input" type="date" required="">
-                            <label for="input" class="label">Start date</label>
+                            <label for="input" >Start date</label>
+                            <input type="date" class="inputStartDate" required="" placeholder="22-09-2024">
                             <div class="underline"></div>
                         </div>
                     </div>
                     <div class="date-end">
                         <div class="input-container">
-                            <input type="text" id="input" type="date" required="">
-                            <label for="input" class="label" onclick="showCalendar(this)">End date</label>
+                            <label for="input">End date</label>
+                            <input type="date" class="inputEndDate" required="">
                             <div class="underline"></div>
                             <div id="calendar" class="calendar"></div>
                         </div>
                     </div>
                 </div>
-                <button class="submitBtn">
+                <button type="submit" class="submitBtn">
                     Start planning
                     <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">
                         <path

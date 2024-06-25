@@ -1,0 +1,62 @@
+.teks-plan {
+    margin: 4rem;
+    padding: 0 20px;
+    height: fit-content;
+    overflow: hidden;
+    line-height: 8px;
+}
+
+.star {
+    position: relative;
+    margin-top: auto;
+    margin-right: 50px;
+    width: 30%;
+}
+
+.rating {
+    pointer-events: none;
+}
+
+.container-plan {
+    padding: 20px;
+    color: #ffff;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+}
+
+.container-plan .content-plan{
+    width: 100%;
+    height: fit-content;
+}
+
+.fill-plan img{
+    width: 13%;
+    border-radius: 10px;
+}
+
+.container-plan .content-plan .fill-plan{
+    padding: 15px;
+    display: flex;
+    background-color: rgba(48, 78, 113, 1);
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.container-plan .content-plan .fill-plan:hover {
+    background-color: rgb(32, 54, 79);
+    transition: ease-in-out 0.3s;
+    font-size: large;
+    padding: 22px;
+}
+
+.container-plan .content-plan .fill-plan .plan-content{
+    margin-left: 20px;
+    width: 100%;
+}
+

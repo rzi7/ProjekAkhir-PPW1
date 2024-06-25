@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateParallax();
 });
 
-
 // Custom JavaScript for Staggered Animation
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -115,3 +114,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// start custom button submit on create plan
+document
+  .getElementById("planningForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    const destination = document.querySelector(".inputDestination").value;
+    const startDate = document.querySelector(".inputStartDate").value;
+    const endDate = document.querySelector(".inputEndDate").value;
+
+    if (destination && startDate && endDate) {
+      window.location.href = "createDetailPlan.html"; // Change this to your target URL
+    } else {
+      alert("Please fill out all fields.");
+    }
+  });
+
+// end custom button submit on create plan
+
+// your plan page
+

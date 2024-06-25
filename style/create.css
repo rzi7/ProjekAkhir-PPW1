@@ -2,6 +2,10 @@
 template start
 */
 
+
+/* input template */
+
+
 .submitBtn {
     margin-top: 20px;
     width: 160px;
@@ -117,11 +121,14 @@ nav {
 }
 
 
-
-.create-plan {
-}
-
-.itinerary-name {
+input[type="date"] {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0;
+    border-bottom: rgba(0, 0, 0, 0.2) 2px solid;
 }
 
 .date {
@@ -147,5 +154,14 @@ nav {
 
 .link, .copyright {
     font-size: 13px;
+}
+
+
+input[type="date"] {
+    color: transparent;
+}
+
+input[type="date"]:focus, input[type="date"]:valid {
+    color: rgba(0, 0, 0, 1);
 }
 
