@@ -1,5 +1,5 @@
 <?php
-require '/php/connect.php';
+require '/xampp/htdocs/Proyek_Akhir/php/connect.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -14,8 +14,8 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['username'] = $row['username'];
     $_SESSION['email'] = $row['email'];
     $_SESSION['password'] = $row['password'];
-    header("Location: /index.html");
+    header("Location: /Proyek_Akhir/index.php");
 } else {
-    header("Location: /login.html");
+    header("Location: /Proyek_Akhir/login.html");
 }
 ?>
