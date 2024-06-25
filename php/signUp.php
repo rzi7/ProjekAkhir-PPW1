@@ -1,5 +1,5 @@
 <?php
-require '/xampp/htdocs/Proyek_Akhir/php/connect.php';
+require '/php/connect.php';
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
