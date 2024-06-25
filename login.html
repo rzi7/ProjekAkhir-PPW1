@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
     <div class="main">
         <div class="container">
-            <div class="heading">Sign Up</div>
-            <form action="/Proyek_Akhir/php/signUp.php" method="POST" class="form">
-                <input required="" class="input" type="text" name="username" id="name" placeholder="Full Name">
+            <div class="heading">Log In</div>
+            <form action="/Proyek_Akhir/php/login.html" method="post" class="form">
                 <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
                 <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
                 <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
-                <input class="login-button" type="submit" value="SignUp">
+                <input class="login-button" type="submit" value="SignIn">
             </form>
             <div class="signup">
-                <span>Already have an account? <a href="login.html">Log In</a></span>
+                <span>Don't have an account? <a href="/Proyek_Akhir/signUp.php">Sign Up</a></span>
             </div>
         </div>
     </div>
